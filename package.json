@@ -1,0 +1,29 @@
+{
+  "name": "skyproject",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.8",
+    "@react-navigation/drawer": "^6.6.3",
+    "@react-navigation/stack": "^6.3.17",
+    "expo": "~49.0.5",
+    "expo-status-bar": "~1.6.0",
+    "react": "18.2.0",
+    "react-native": "0.72.3",
+    "react-native-elements": "^3.4.3",
+    "react-native-gesture-handler": "^2.12.1",
+    "react-native-gifted-chat": "^2.4.0",
+    "react-native-reanimated": "~3.3.0",
+    "react-native-video": "^5.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
