@@ -1,30 +1,42 @@
-import { useRef, DependencyList, useMemo, useEffect, useState } from "react";
-import { Animated } from "react-native";
+import React, { useState, useEffect } from 'react';
+import { GiftedChat } from 'react-native-gifted-chat';
 
-const SettingScreen = (color) => {
-  const anim = useMemo(() => new Animated.Value(0), [color]);
-  const [finished, setFinished] = useState(true)
-  const currentColor = useRef(color);
-  const nextColor = useMemo(()=> color, [color]);
-
-  const animColor = anim.interpolate({
-    inputRange: [0, 1],
-    outputRange: [currentColor.current, nextColor],
-  });
+const RoomChat = ({ roomId }) => {
+  const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
 
   useEffect(() => {
-    setFinished(false)
-    Animated.spring(anim, {
-      toValue: 1,
-      useNativeDriver: false,
-    }).start(() => {
-      currentColor.current = nextColor;
-      setFinished(true)
-    });
+    // Get the messages for the current room
+    fetch(`/api/rooms/${roomId}/messages`)
+      .then(response => response.json())
+      .then(messages => setMessages(messages));
+  }, [roomId]);
 
-  }, [color]);
+  const onSend = (text) => {
+    // Send the message to the server
+    fetch(`/api/rooms/${roomId}/messages`, {
+      method: 'POST',
+      body: JSON.stringify({ text }),
+    })
+      .then(response => response.json())
+      .then(message => {
+        setMessages([...messages, message]);
+        setIsTyping(false);
+      });
+  };
 
-  return [animColor, finished];
+  const onTyping = () => {
+    setIsTyping(true);
+  };
+
+  return (
+    <GiftedChat
+      messages={messages}
+      onSend={onSend}
+      onTyping={onTyping}
+      isTyping={isTyping}
+    />
+  );
 };
 
-export default SettingScreen
+export default RoomChat;
