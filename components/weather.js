@@ -9,17 +9,16 @@ export default function WeatherModule({ navigation }) {
     const image = {uri: 'https://i.imgur.com/kvmIcab.png'};
     const [lat, setLat] = React.useState(null);
     const [lon, setLon] = React.useState(null);
-    const RequestsPermission = async () => {
-        const { status } = await Location.requestBackgroundPermissionsAsync();
-        if (status !== "granted") {
-            alert("Bạn cần đồng ý cấp quyền truy cập vị trí để sử dụng tính năng này");
-            navigation.navigate("MainScreen");
+    const requireLocation = async () => {
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+            console.log('Permission to access location was denied');
         }
-        const location = await Location.getCurrentPositionAsync();
+        let location = await Location.getCurrentPositionAsync({});
         setLat(location.coords.latitude);
         setLon(location.coords.longitude);
     };
-    RequestsPermission();
+    requireLocation();
     console.log(lat);
     console.log(lon);
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=bc41b7fb7cd767588a708090e58bffc6&lang=vi`)
