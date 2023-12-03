@@ -9,7 +9,7 @@
 - [Cơ sở lý luận thực tiễn (Reasons)](#cơ-sở-lý-luận-thực-tiễn-reasons)
 - [Tính năng (Features)](tính-năng-features)
 - [Ngôn ngữ lập trình và công nghệ sử dụng (Code language and Technologies)](ngôn-ngữ-lập-trình-và-công-nghệ-sử-dụng-code-language-and-technologies)
-- [Hướng dẫn cài đặt và thêm module](#hướng-dẫn-cài-đặt-và-thêm-module)
+- [Hướng dẫn cài đặt và thêm module](#hướng dẫn cài đặt và thêm module)
 ## Giới thiệu (Introduce)
 **Vietnamese caption**
 
@@ -111,6 +111,73 @@ Pre-programmed six different subprograms (modules) allow users to have the best 
 - Trên điện thoại cài đặt ứng dụng Expo-go (CHplay/appstore) 
 -- Đối với điện thoại chạy hệ điều hành IOS thì sau khi tải app vào camera rồi quét mã QR trên
 -- Đối với điện thoại android thì vào app expo và nhấn nút scanQR
+
+**Hướng dẫn thêm module**
+- Mở folder( thư mục) mã nguồn của dự án lên và vào folder components
+- Tạo 1 file mới với đuôi `.js`
+- Đưa đoạn code module bạn muốn vào sản phẩm,ví dụ
+https://github.com/iotran207/Sky-project/blob/master/components/example.js
+```js
+import {Text,View} from 'react-native';
+import React from 'react';
+
+export default function example() {
+    return (
+        <View>
+            <Text>Example</Text>
+        </View>
+    )
+}
+```
+- Mở file navigation.js ở folder navigation, xuất module ở vào file.
+```js
+import RelaxMyInfo from "../components/RelaxMyInfo";
+import RelaxBusScreen from "../components/RelaxBus";
+import RelaxWarn from "../components/RelaxWarn";
+```
+- Đăng kí vào navigation(điều hướng)
+```js
+<Stack.Screen name="tên module" component={tên module}/>
+```
+- Ở file `main.js`
+Nếu bạn không muốn sử dụng tính năng giao diện mở rộng thì có thể tham khảo code sau đây để gắn module vào khung chat.
+```js
+        else if(messages[0].text.toLowerCase().startsWith("tkb")){
+            axios.get(`https://cht-api.personal-1.repl.co/tkb/thoikhoabieu?_class=${messages[0].text.split(" ")[1]}`)	  
+            .then((response) => {
+                setMessages((previousMessages) => GiftedChat.append(previousMessages, [
+                    {
+                        _id: Math.round(Math.random() * 1000000),
+                        text: "Đây là thời khóa biểu của " + messages[0].text.split(" ")[1]+ "\n" + "Bấm vào để xem chi tiết    ",
+                        createdAt: new Date(),
+                        user: {
+                            _id: 2,
+                            name: "CHT-DIGITAL-CHAT",
+                            avatar: "https://i.imgur.com/TlyVwV4_d.png",
+                        },
+                        image:`https://cht-api.cht-confession.repl.co/tkb/?_class=${messages[0].text.split(" ")[1]}&key=letranhoanglan`
+                    },
+                ]));
+            })
+        }
+
+```
+
+- Còn nếu bạn muốn dùng tính năng mở rộng giao diện thì bạn có thể tham khảo code sau đây.
+```js
+        else if(messages[0].text.toLowerCase() == "thời tiết hôm nay"){
+            navigation.navigate("Tên module");
+        }
+```
+
+Một số tài liệu có thể tham khảo:
+-	https://nodejs.org/en/docs
+-	https://reactnative.dev/
+-	https://github.com/FaridSafi/react-native-gifted-chat 
+
+
+
+
 
 **link video chi tiết**
 (updating. . . )
