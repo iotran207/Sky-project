@@ -4,11 +4,13 @@
 
 ![](https://api.visitorbadge.io/api/VisitorHit?user=iotran207f&repo=Sky-project)
 
-###MỤC  LỤC
-
-[TOCM]
+### MỤC  LỤC
+- [Giới thiệu (Introduce)](#giới-thiệu-introduce)
+- [Cơ sở lý luận thực tiễn (Reasons)](#cơ-sở-lý-luận-thực-tiễn-reasons)
+- [Tính năng (Features)](tính-năng-features)
+- [Ngôn ngữ lập trình và công nghệ sử dụng (Code language and Technologies)](ngôn-ngữ-lập-trình-và-công-nghệ-sử-dụng-code-language-and-technologies)
+- [Hướng dẫn cài đặt và thêm module](#hướng dẫn cài đặt và thêm module)
 ## Giới thiệu (Introduce)
-
 **Vietnamese caption**
 
 Công nghệ thông tin đang trở thành một lực lượng mạnh mẽ, len lõi và thấu hiểu hầu hết các khía cạnh của cuộc sống. Sức mạnh của nó không chỉ là sự tiến bộ kỹ thuật mà còn chính là khả năng mang lại những ứng dụng đầy ý nghĩa, đồng hành và hỗ trợ đắc lực cho con người. Trước tiên, xã hội hiện nay đang đối diện với những thách thức ngày càng phức tạp, Trí tuệ nhân tạo (AI) đã tạo nên một cuộc cách mạng cho ngành giáo dục toàn cầu, khi nó dần giảm gánh nặng cho giáo viên, cá nhân hóa việc học tập của học sinh. Dù vậy ở Việt Nam, AI còn khá mới mẻ và chưa được ứng dụng quá nhiều. Chính vì thế, chúng em đã quyết định viết sản phẩm Sky Project nhằm hỗ trợ khai thác có hiệu quả AI.
@@ -61,7 +63,7 @@ Pre-programmed six different subprograms (modules) allow users to have the best 
 
 • CHT-DIGITAL-CHAT-TKB: timetable lookup module, the timetable is updated in real time on the page of Ha Tinh High School for the Gifted, and has been used by the NEWS team club on the fanpage chatbot Facebook.
 
-• SKY-MUSIC: module that allows music playback on the Relax-Project platform. Use algorithms to retrieve music and play it from Youtube with fast music download speed using the Async function, HTTP Request communication method and Youtube-dl library.
+• SKY-MUSIC: module that allows music playback on the Sky-Project platform. Use algorithms to retrieve music and play it from Youtube with fast music download speed using the Async function, HTTP Request communication method and Youtube-dl library.
 
 • SKY-TOP-NEWS: module updates notable articles in real time with extremely large data sources from reputable newspapers from around the world in general and Vietnam in particular (24H newspapers, newspapers Channel 14, Nhan Dan News, VOV News,...)
 
@@ -89,311 +91,35 @@ Pre-programmed six different subprograms (modules) allow users to have the best 
 **Testing**
 - [Expo go](https://expo.dev/expo-go)
 
+## Hướng dẫn cài đặt và thêm module
 
-# Editor.md
+**Yêu cầu phần mềm**
+- node.js
+- git
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+**Hướng dẫn chạy và sử dụng**
+- chạy tập lệnh 
+    ```sh
+    git clone https://github.com/iotran207/Sky-project
+    cd Sky-project
+    npm install
+    npm start
+    ```
+- Sau khi chạy xong thì bạn sẽ có một mã QR như sau
+    ![](https://i.imgur.com/lgMcQ5b.png)
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+- Trên điện thoại cài đặt ứng dụng Expo-go (CHplay/appstore) 
+-- Đối với điện thoại chạy hệ điều hành IOS thì sau khi tải app vào camera rồi quét mã QR trên
+-- Đối với điện thoại android thì vào app expo và nhấn nút scanQR
 
+**link video chi tiết**
+(updating. . . )
 
-**Table of Contents**
+-------------------------------------------------------------------
 
-[TOCM]
+From Skyteam with luv ╰(*°▽°*)╯♥♥♥
 
-[TOC]
 
-#H1 header
-##H2 header
-###H3 header
-####H4 header
-#####H5 header
-######H6 header
-#Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-####Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#####Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-######Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 
-##Headers (Underline)
 
-H1 Header (Underline)
-=============
 
-H2 Header (Underline)
--------------
-
-###Characters
-                
-----
-
-~~Strikethrough~~ <s>Strikethrough (when enable html tag decode.)</s>
-*Italic*      _Italic_
-**Emphasis**  __Emphasis__
-***Emphasis Italic*** ___Emphasis Italic___
-
-Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
-
-**Abbreviation(link HTML abbr tag)**
-
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
-
-###Blockquotes
-
-> Blockquotes
-
-Paragraphs and Line Breaks
-                    
-> "Blockquotes Blockquotes", [Link](http://localhost/)。
-
-###Links
-
-[Links](http://localhost/)
-
-[Links with title](http://localhost/ "link title")
-
-`<link>` : <https://github.com>
-
-[Reference link][id/name] 
-
-[id/name]: http://link-url/
-
-GFM a-tail link @pandao
-
-###Code Blocks (multi-language) & highlighting
-
-####Inline code
-
-`$ npm install marked`
-
-####Code Blocks (Indented style)
-
-Indented 4 spaces, like `<pre>` (Preformatted Text).
-
-    <?php
-        echo "Hello world!";
-    ?>
-    
-Code Blocks (Preformatted text):
-
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
-
-####Javascript　
-
-```javascript
-function test(){
-	console.log("Hello world!");
-}
- 
-(function(){
-    var box = function(){
-        return box.fn.init();
-    };
-
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
-
-			return this;
-        },
-
-		add : function(str){
-			alert("add", str);
-
-			return this;
-		},
-
-		remove : function(str){
-			alert("remove", str);
-
-			return this;
-		}
-    };
-    
-    box.fn.init.prototype = box.fn;
-    
-    window.box =box;
-})();
-
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
-```
-
-####HTML code
-
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <mate charest="utf-8" />
-        <title>Hello world!</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-    </body>
-</html>
-```
-
-###Images
-
-Image:
-
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
-
-> Follow your heart.
-
-![](https://pandao.github.io/editor.md/examples/images/8.jpg)
-
-> 图为：厦门白城沙滩 Xiamen
-
-图片加链接 (Image + Link)：
-
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/examples/images/7.jpg "李健首张专辑《似水流年》封面")
-
-> 图为：李健首张专辑《似水流年》封面
-                
-----
-
-###Lists
-
-####Unordered list (-)
-
-- Item A
-- Item B
-- Item C
-     
-####Unordered list (*)
-
-* Item A
-* Item B
-* Item C
-
-####Unordered list (plus sign and nested)
-                
-+ Item A
-+ Item B
-    + Item B 1
-    + Item B 2
-    + Item B 3
-+ Item C
-    * Item C 1
-    * Item C 2
-    * Item C 3
-
-####Ordered list
-                
-1. Item A
-2. Item B
-3. Item C
-                
-----
-                    
-###Tables
-                    
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
-
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
-
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
-                
-----
-
-####HTML entities
-
-&copy; &  &uml; &trade; &iexcl; &pound;
-&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
-
-X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
-
-18&ordm;C  &quot;  &apos;
-
-##Escaping for Special Characters
-
-\*literal asterisks\*
-
-##Markdown extras
-
-###GFM task list
-
-- [x] GFM task list 1
-- [x] GFM task list 2
-- [ ] GFM task list 3
-    - [ ] GFM task list 3-1
-    - [ ] GFM task list 3-2
-    - [ ] GFM task list 3-3
-- [ ] GFM task list 4
-    - [ ] GFM task list 4-1
-    - [ ] GFM task list 4-2
-
-###Emoji mixed :smiley:
-
-> Blockquotes :star:
-
-####GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
-
-- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
-- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
-- [x] [ ] :smiley: this is a complete item :smiley:;
-- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
-- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
-    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
-    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
-            
-###TeX(LaTeX)
-   
-$$E=mc^2$$
-
-Inline $$E=mc^2$$ Inline，Inline $$E=mc^2$$ Inline。
-
-$$\(\sqrt{3x-1}+(1+x)^2\)$$
-                    
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
-                
-###FlowChart
-
-```flow
-st=>start: Login
-op=>operation: Login operation
-cond=>condition: Successful Yes or No?
-e=>end: To admin
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-###Sequence Diagram
-                    
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-###End
