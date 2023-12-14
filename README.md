@@ -9,7 +9,7 @@
 - [Cơ sở lý luận thực tiễn (Reasons)](#cơ-sở-lý-luận-thực-tiễn-reasons)
 - [Tính năng (Features)](tính-năng-features)
 - [Ngôn ngữ lập trình và công nghệ sử dụng (Code language and Technologies)](ngôn-ngữ-lập-trình-và-công-nghệ-sử-dụng-code-language-and-technologies)
-- [Hướng dẫn cài đặt và thêm module](#hướng dẫn cài đặt và thêm module)
+- [Hướng dẫn cài đặt và thêm module](#hướng-dẫn-cài-đặt-và-thêm-module)
 ## Giới thiệu (Introduce)
 **Vietnamese caption**
 
